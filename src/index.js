@@ -29,9 +29,12 @@ function renderMain(gameObj){
 }
 const formHigh = document.querySelector('#high-score-form')
 const highScore = document.querySelector('#detail-high-score')
-const highScoreInput = document.querySelector('#score-input')
 
-formHigh.addEventListener('sumbit', (e) => {
+
+
+formHigh.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log(e)
+ highScore.innerHTML = ''
+  highScore.append(e.target['score-input'].value)
+
 })
